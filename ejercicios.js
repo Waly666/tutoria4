@@ -24,11 +24,7 @@ console.log("La suma es: " + resultado);
 
 // Ejercicio 3: Función que determina si un número es par o impar
 function esPar(numero) {
-    if (numero % 2 === 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return numero % 2 === 0;
 }
 
 console.log("¿El 4 es par? " + esPar(4)); // true
@@ -37,9 +33,7 @@ console.log("¿El 7 es par? " + esPar(7)); // false
 // -----------------------------------
 
 // Ejercicio 4: Función flecha para calcular el área de un rectángulo
-const calcularArea = (base, altura) => {
-    return base * altura;
-};
+const calcularArea = (base, altura) => base * altura;
 
 console.log("El área del rectángulo es: " + calcularArea(5, 10));
 
@@ -59,6 +53,9 @@ contarHasta10();
 
 // Ejercicio 6: Función que calcula el factorial de un número
 function factorial(n) {
+    if (n < 0) {
+        return undefined; // No existe factorial de números negativos
+    }
     if (n === 0 || n === 1) {
         return 1;
     }
