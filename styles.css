@@ -1,0 +1,89 @@
+
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    background-color: hsl(273, 15%, 86%);
+
+}
+.header{
+    display: flex ;
+    justify-content: space-between; /*MUY IMPORTANTE SEPARA LOS ELEMENTOS EN AL HEADER O EN CUALQUIER*/
+    align-items: center;/*centrar verticalmente*/
+    color: rgb(240, 243, 245);
+    padding: 3rem 5rem;
+    background-color: rgb(125, 7, 204);
+}
+
+.nav a{
+    text-decoration: none;
+    color: rgb(241, 89, 221);
+    margin-left: 1;
+    justify-content: space-between;
+    
+}
+/*LAYOUT PRINCIPAL HECHO CON GRID*/
+.container{
+    display: grid;/*utilizamos grid por q nos permite y nesecitamos uns estreuctura de dos comunas*/
+    grid-template-columns: 250px 1fr; /*1fr 1fr significa q cada columna ocupe la misma cantidad de espacio  ESTO ES IMPORTANTISIMO*/
+    background-color: rgb(24, 12, 189);
+    gap: 20px;
+    padding: 20px;
+
+
+
+    
+}
+.sidebar{
+    background-color: hsl(300, 64%, 45%);
+    padding: 1rem;
+    border-radius: 19px;
+}
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+}   
+.sidebar a{
+    text-decoration: none;
+    color: rgb(213, 208, 224);
+    
+}
+
+
+/*CONTENIDO*/
+.content{
+    background-color: hsl(273, 57%, 58%);
+    flex-direction: column;/*UTLIZAMOS FLEX PARA PONER ELEMENTOS UNO DEBAJO DE OTRO*/
+    border-radius: 19px;
+    gap:20px;
+   
+
+
+}   
+.card{
+    
+    background-color: hsl(273, 64%, 45%);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 19px;
+    color: rgb(240, 236, 236);
+}   
+.footer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 2rem 2rem;
+    background-color: rgb(158, 9, 133);
+    color: rgb(249, 251, 252);
+    margin-top: 20px;
+    border-radius: 19px;
+    padding: 10px;
+}
+@media (max-width: 768px){/*OJO ESTOS ESD IMPORTANTISIMO TAMBIEN DADO Q AQUI SE DEFINE EL RESPONSIVE DESIGN*/    .container{
+        grid-template-columns: 1fr; /*cambia a una sola columna en pantallas pequeñas*/
+    }
+    .content{
+        flex-direction: column;
+    }
+}
